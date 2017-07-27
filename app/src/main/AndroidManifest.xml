@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.HomePage"/>
-        <activity android:name=".activities.Home1">
+        <activity android:name=".activities.Home1Activity">
         </activity>
     </application>
 
