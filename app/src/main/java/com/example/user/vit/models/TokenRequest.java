@@ -3,16 +3,15 @@ package com.example.user.vit.models;
 
 public class TokenRequest {
 
-    private String email;
+    private String regno;
     private String password;
-    private String grant_type;
 
-    public String getEmail() {
-        return email;
+    public String getRegno() {
+        return regno;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRegno(String regno) {
+        this.regno = regno;
     }
 
     public String getPassword() {
@@ -21,13 +20,5 @@ public class TokenRequest {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getGrant_type() {
-        return grant_type;
-    }
-
-    public void setGrant_type(String grant_type) {
-        this.grant_type = grant_type;
     }
 }

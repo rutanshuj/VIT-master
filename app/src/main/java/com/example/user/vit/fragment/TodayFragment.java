@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import com.example.user.vit.R;
 import com.example.user.vit.adapters.TodayAdapter;
 import com.example.user.vit.interfaces.VUApi;
-import com.example.user.vit.models.Courses;
+
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
