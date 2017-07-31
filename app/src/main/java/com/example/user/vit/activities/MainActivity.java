@@ -24,11 +24,12 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, b1;
+    Button button, b1, b2;
     String response;
     EditText editText1, editText2;
     String regno, password;
@@ -44,10 +45,18 @@ public class MainActivity extends AppCompatActivity {
         editText2 = (EditText) findViewById(R.id.password);
         button = (Button) findViewById(R.id.login);
         b1 = (Button) findViewById(R.id.home);
+        b2 = (Button) findViewById(R.id.mapbttn);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Home1Activity.class);
+                startActivity(i);
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MapActivity.class);
                 startActivity(i);
             }
         });

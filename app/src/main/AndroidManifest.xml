@@ -18,8 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.HomePage"/>
-        <activity android:name=".activities.Home1Activity">
-        </activity>
+        <activity android:name=".activities.Home1Activity"/>
+        <activity android:name=".activities.MapActivity"/>
     </application>
 
 </manifest>
