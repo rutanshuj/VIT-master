@@ -4,45 +4,25 @@ package com.example.user.vit.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Courses {
+public class TimeTable {
 
-    @SerializedName("course_time")
-    @Expose
-    private String course_time;
-
-    @SerializedName("course_name")
+    @SerializedName("class")
     @Expose
     private String course_name;
 
-    @SerializedName("course_code")
+    @SerializedName("code")
     @Expose
     private String course_code;
 
-    @SerializedName("course_slot")
+    @SerializedName("slot")
     @Expose
     private String course_slot;
 
-    @SerializedName("course_location")
+    @SerializedName("class")
     @Expose
     private String course_location;
 
-    public Courses() {
-    }
-
-    public Courses(String course_time, String course_name, String course_code, String course_slot, String course_location) {
-        this.course_time = course_time;
-        this.course_name = course_name;
-        this.course_code = course_code;
-        this.course_slot = course_slot;
-        this.course_location = course_location;
-    }
-
-    public String getCourse_time() {
-        return course_time;
-    }
-
-    public void setCourse_time(String course_time) {
-        this.course_time = course_time;
+    public TimeTable() {
     }
 
     public String getCourse_name() {

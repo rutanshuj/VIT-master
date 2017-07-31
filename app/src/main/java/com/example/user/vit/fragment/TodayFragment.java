@@ -15,13 +15,10 @@ import com.example.user.vit.adapters.TodayAdapter;
 import com.example.user.vit.interfaces.VUApi;
 
 
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
 public class TodayFragment extends android.support.v4.app.Fragment {
 
     private RecyclerView recyclerView;
-    private VUApi vuApi;
+    private VUApi service;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,12 +26,6 @@ public class TodayFragment extends android.support.v4.app.Fragment {
 
         TodayAdapter todayAdapter = new TodayAdapter();
 
-        Retrofit builder = new Retrofit.Builder()
-                .baseUrl("")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        vuApi = builder.create(VUApi.class);
 
 
         recyclerView = (RecyclerView) v.findViewById(R.id.today_sub_recyclerView);
