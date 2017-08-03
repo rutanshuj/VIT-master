@@ -5,12 +5,10 @@
               android:layout_height="match_parent">
 
     <com.example.user.vit.activities.TouchImageView
-        android:scaleType="matrix"
         android:id="@+id/map_img"
-        android:layout_gravity="center"
-        android:adjustViewBounds="true"
-        android:src="@drawable/vit_map"
+        android:background="#ffff"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/vit_map"/>
 
 </LinearLayout>
