@@ -34,21 +34,7 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.MyViewHolder
 
         TokenRequest tokenRequest = new TokenRequest();
         tokenRequest.setRegno("15BCE2016");
-        Call<TimeTable> coursesCall = service.getCourses(tokenRequest);
 
-        coursesCall.enqueue(new Callback<TimeTable>() {
-            @Override
-            public void onResponse(Call<TimeTable> call, Response<TimeTable> response) {
-                if(response!= null) {
-                    Log.d("ResponseCode", response.body().toString());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<TimeTable> call, Throwable t) {
-
-            }
-        });
 
 
         return new MyViewHolder(itemview);
