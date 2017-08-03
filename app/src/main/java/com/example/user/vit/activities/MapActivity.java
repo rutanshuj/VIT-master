@@ -7,9 +7,6 @@ import android.widget.ImageView;
 
 import com.example.user.vit.R;
 
-import static java.security.AccessController.getContext;
-
-
 public class MapActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -17,8 +14,7 @@ public class MapActivity extends AppCompatActivity {
         setContentView(R.layout.map_frag);
 
 
-        ImageView iv = (ImageView) findViewById(R.id.map_img);
-        iv.setOnTouchListener(new Touch());
-        iv.setScaleType(ImageView.ScaleType.MATRIX);
+        TouchImageView iv = (TouchImageView) findViewById(R.id.map_img);
+
     }
 }
