@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="15dp">
     <LinearLayout
             android:id="@+id/linear"
-
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
             android:layout_width="270dp"
@@ -48,6 +50,23 @@
                 android:textSize="25sp"/>
 
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_below="@+id/linear"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.triggertrap.seekarc.SeekArc
+            android:id="@+id/seekArc"
+            seekarc:enabled="false"
+            seekarc:rotation="180"
+            seekarc:startAngle="30"
+            seekarc:sweepAngle="300"
+            seekarc:touchInside="true"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"/>
     </LinearLayout>
     <TextView
         android:textColor="#000"
