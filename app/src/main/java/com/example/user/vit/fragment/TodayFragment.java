@@ -15,6 +15,7 @@ import com.example.user.vit.R;
 import com.example.user.vit.adapters.TodayAdapter;
 import com.example.user.vit.interfaces.VUApi;
 import com.example.user.vit.models.Response;
+import com.example.user.vit.models.Schedule;
 import com.example.user.vit.models.TokenRequest;
 
 import retrofit2.Call;
@@ -44,25 +45,9 @@ public class TodayFragment extends android.support.v4.app.Fragment {
         TokenRequest tokenRequest = new TokenRequest();
         tokenRequest.setRegno("15BCE2016");
 
-        Call<Response> timeTableCall  = service.getCourses(tokenRequest);
+        Call<Schedule> courses = service.getCourses(tokenRequest);
 
-        timeTableCall.enqueue(new Callback<Response>() {
-            @Override
-            public void onResponse(Call<Response> call, retrofit2.Response response) {
-                if(response.code() == 200){
 
-                    Response timeTable = response.body();
-                    Log.d("TodayFragment", "onReponse: " + response);
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Response> call, Throwable t) {
-                Log.d("TodayFragment", t.getMessage());
-
-            }
-        });
         recyclerView = (RecyclerView) v.findViewById(R.id.today_sub_recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

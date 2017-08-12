@@ -8,23 +8,23 @@ public class Week<T> {
 
     @SerializedName("MON")
     @Expose
-    private T mon;
+    private Day mon;
 
     @SerializedName("TUE")
     @Expose
-    private T tue;
+    private Day tue;
 
     @SerializedName("WED")
     @Expose
-    private T wed;
+    private Day wed;
 
     @SerializedName("THU")
     @Expose
-    private T thu;
+    private Day thu;
 
     @SerializedName("FRI")
     @Expose
-    private T fri;
+    private Day fri;
 
 
 }
