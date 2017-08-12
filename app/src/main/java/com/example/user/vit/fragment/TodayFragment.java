@@ -14,9 +14,15 @@ import android.view.ViewGroup;
 import com.example.user.vit.R;
 import com.example.user.vit.adapters.TodayAdapter;
 import com.example.user.vit.interfaces.VUApi;
+import com.example.user.vit.models.Day;
 import com.example.user.vit.models.Response;
 import com.example.user.vit.models.Schedule;
 import com.example.user.vit.models.TokenRequest;
+import com.example.user.vit.models.Week;
+import com.google.gson.Gson;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -45,8 +51,32 @@ public class TodayFragment extends android.support.v4.app.Fragment {
         TokenRequest tokenRequest = new TokenRequest();
         tokenRequest.setRegno("15BCE2016");
 
-        Call<Schedule> courses = service.getCourses(tokenRequest);
+        Call<Response> responseCall = service.getCourses(tokenRequest);
 
+        responseCall.enqueue(new Callback<Response>() {
+            @Override
+            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                if(response.code() == 200 ){
+
+                    Response response1 = response.body();
+                    Gson  gson = new Gson();
+                    Object o = response1.getWeek().getMon().getOne().getCode();
+                    String course = gson.toJson(o) ;
+                    try {
+                        JSONObject jsonObject = new JSONObject(course);
+                        Log.d("lasun", String.valueOf(jsonObject));
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Response> call, Throwable t) {
+                Log.d("lauda", "onResponse: " + t);
+            }
+        });
 
         recyclerView = (RecyclerView) v.findViewById(R.id.today_sub_recyclerView);
         recyclerView.setHasFixedSize(true);

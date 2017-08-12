@@ -6,182 +6,179 @@ import com.google.gson.annotations.SerializedName;
 public class Day<T> {
 
     @SerializedName("1")
-    @Expose
-    private Schedule one;
+    private T one;
 
     @SerializedName("2")
-    @Expose
-    private Schedule two;
+    private T two;
 
     @SerializedName("3")
-    @Expose
-    private Schedule three;
+    private T three;
 
     @SerializedName("4")
     @Expose
-    private Schedule four;
+    private T four;
 
     @SerializedName("5")
     @Expose
-    private Schedule five;
+    private T five;
 
     @SerializedName("6")
     @Expose
-    private Schedule six;
+    private T six;
 
     @SerializedName("7")
     @Expose
-    private Schedule seven;
+    private T seven;
 
     @SerializedName("8")
     @Expose
-    private Schedule eight;
+    private T eight;
 
     @SerializedName("9")
     @Expose
-    private Schedule nine;
+    private T nine;
 
     @SerializedName("10")
     @Expose
-    private Schedule ten;
+    private T ten;
 
     @SerializedName("11")
     @Expose
-    private Schedule eleven;
+    private T eleven;
 
     @SerializedName("12")
     @Expose
-    private Schedule twelve;
+    private T twelve;
 
     @SerializedName("13")
     @Expose
-    private Schedule thirteen;
+    private T thirteen;
 
     @SerializedName("14")
     @Expose
-    private Schedule fourteen;
+    private T fourteen;
 
     @SerializedName("15")
     @Expose
-    private Schedule fifteen;
+    private T fifteen;
 
-    public Schedule getOne() {
+    public T getOne() {
         return one;
     }
 
-    public void setOne(Schedule one) {
+    public void setOne(T one) {
         this.one = one;
     }
 
-    public Schedule getTwo() {
+    public T getTwo() {
         return two;
     }
 
-    public void setTwo(Schedule two) {
+    public void setTwo(T two) {
         this.two = two;
     }
 
-    public Schedule getThree() {
+    public T getThree() {
         return three;
     }
 
-    public void setThree(Schedule three) {
+    public void setThree(T three) {
         this.three = three;
     }
 
-    public Schedule getFour() {
+    public T getFour() {
         return four;
     }
 
-    public void setFour(Schedule four) {
+    public void setFour(T four) {
         this.four = four;
     }
 
-    public Schedule getFive() {
+    public T getFive() {
         return five;
     }
 
-    public void setFive(Schedule five) {
+    public void setFive(T five) {
         this.five = five;
     }
 
-    public Schedule getSix() {
+    public T getSix() {
         return six;
     }
 
-    public void setSix(Schedule six) {
+    public void setSix(T six) {
         this.six = six;
     }
 
-    public Schedule getSeven() {
+    public T getSeven() {
         return seven;
     }
 
-    public void setSeven(Schedule seven) {
+    public void setSeven(T seven) {
         this.seven = seven;
     }
 
-    public Schedule getEight() {
+    public T getEight() {
         return eight;
     }
 
-    public void setEight(Schedule eight) {
+    public void setEight(T eight) {
         this.eight = eight;
     }
 
-    public Schedule getNine() {
+    public T getNine() {
         return nine;
     }
 
-    public void setNine(Schedule nine) {
+    public void setNine(T nine) {
         this.nine = nine;
     }
 
-    public Schedule getTen() {
+    public T getTen() {
         return ten;
     }
 
-    public void setTen(Schedule ten) {
+    public void setTen(T ten) {
         this.ten = ten;
     }
 
-    public Schedule getEleven() {
+    public T getEleven() {
         return eleven;
     }
 
-    public void setEleven(Schedule eleven) {
+    public void setEleven(T eleven) {
         this.eleven = eleven;
     }
 
-    public Schedule getTwelve() {
+    public T getTwelve() {
         return twelve;
     }
 
-    public void setTwelve(Schedule twelve) {
+    public void setTwelve(T twelve) {
         this.twelve = twelve;
     }
 
-    public Schedule getThirteen() {
+    public T getThirteen() {
         return thirteen;
     }
 
-    public void setThirteen(Schedule thirteen) {
+    public void setThirteen(T thirteen) {
         this.thirteen = thirteen;
     }
 
-    public Schedule getFourteen() {
+    public T getFourteen() {
         return fourteen;
     }
 
-    public void setFourteen(Schedule fourteen) {
+    public void setFourteen(T fourteen) {
         this.fourteen = fourteen;
     }
 
-    public Schedule getFifteen() {
+    public T getFifteen() {
         return fifteen;
     }
 
-    public void setFifteen(Schedule fifteen) {
+    public void setFifteen(T fifteen) {
         this.fifteen = fifteen;
     }
 }

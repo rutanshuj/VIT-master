@@ -1,24 +1,19 @@
 package com.example.user.vit.models;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Schedule<T>{
 
     @SerializedName("code")
-    @Expose
     private T code;
 
     @SerializedName("type")
-    @Expose
     private T type;
 
     @SerializedName("slot")
-    @Expose
     private T slot;
 
     @SerializedName("class")
-    @Expose
     private T class1;
 
     public T getCode() {

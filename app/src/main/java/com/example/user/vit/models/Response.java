@@ -1,17 +1,29 @@
 package com.example.user.vit.models;
 
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Response<T> {
 
     @SerializedName("result")
-    @Expose
-    private T result;
+   private T result;
 
     @SerializedName("info")
-    @Expose
     private Week week;
 
+    public T getResult() {
+        return result;
+    }
+
+    public void setResult(T result) {
+        this.result = result;
+    }
+
+    public Week getWeek() {
+        return week;
+    }
+
+    public void setWeek(Week week) {
+        this.week = week;
+    }
 }
