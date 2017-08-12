@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     if (code == 200) {
                         Toast.makeText(getApplicationContext(),
                                 "Successful Login", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), HomePage.class);
+                        Intent intent = new Intent(getApplicationContext(), Home1Activity.class);
                         startActivity(intent);
                     } else if (code == 500) {
                         Toast.makeText(getApplicationContext(),
@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 password = "\"" + password + "\"";
 
                 String response =
-                        makePostRequest("https://young-ravine-50082.herokuapp.com/login",
+                        makePostRequest("http://projectvu.adgvit.com/login",
                                 "{\"regno\" : " + regno + ", \"password\" : "
                                         + password + "}", getApplicationContext());
                 return response;

@@ -14,12 +14,11 @@ import android.view.ViewGroup;
 import com.example.user.vit.R;
 import com.example.user.vit.adapters.TodayAdapter;
 import com.example.user.vit.interfaces.VUApi;
-import com.example.user.vit.models.TimeTable;
+import com.example.user.vit.models.Response;
 import com.example.user.vit.models.TokenRequest;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -45,19 +44,21 @@ public class TodayFragment extends android.support.v4.app.Fragment {
         TokenRequest tokenRequest = new TokenRequest();
         tokenRequest.setRegno("15BCE2016");
 
-        Call<TimeTable> timeTableCall  = service.getCourses(tokenRequest);
+        Call<Response> timeTableCall  = service.getCourses(tokenRequest);
 
-        timeTableCall.enqueue(new Callback<TimeTable>() {
+        timeTableCall.enqueue(new Callback<Response>() {
             @Override
-            public void onResponse(Call<TimeTable> call, Response<TimeTable> response) {
-                int statusCode = response.code();
+            public void onResponse(Call<Response> call, retrofit2.Response response) {
+                if(response.code() == 200){
 
-                TimeTable timeTable = response.body();
-                Log.d("TodayFragment", "onResponse: " +timeTable + statusCode);
+                    Response timeTable = response.body();
+                    Log.d("TodayFragment", "onReponse: " + response);
+
+                }
             }
 
             @Override
-            public void onFailure(Call<TimeTable> call, Throwable t) {
+            public void onFailure(Call<Response> call, Throwable t) {
                 Log.d("TodayFragment", t.getMessage());
 
             }
