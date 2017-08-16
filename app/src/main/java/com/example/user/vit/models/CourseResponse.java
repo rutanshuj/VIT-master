@@ -3,13 +3,13 @@ package com.example.user.vit.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Response<T> {
+public class CourseResponse<T> {
 
     @SerializedName("result")
     private T result;
 
     @SerializedName("info")
-    private Week week;
+    private CourseList info;
 
     public T getResult() {
         return result;
@@ -19,11 +19,11 @@ public class Response<T> {
         this.result = result;
     }
 
-    public Week getWeek() {
-        return week;
+    public CourseList getInfo() {
+        return info;
     }
 
-    public void setWeek(Week week) {
-        this.week = week;
+    public void setInfo(CourseList info) {
+        this.info = info;
     }
 }

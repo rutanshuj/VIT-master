@@ -15,11 +15,9 @@ import com.example.user.vit.R;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by user on 5/25/2017.
- */
-
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
+
+
     List<Info> data= Collections.emptyList();
     LayoutInflater layoutInflater;
     private Context context;
@@ -37,14 +35,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         MyViewHolder viewHolder=new MyViewHolder(view);
         return viewHolder;
     }
-
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Info current=data.get(position);
-
         holder.title.setText(current.title);
-
-
     }
 
     @Override
@@ -61,13 +55,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             title= (TextView)itemView.findViewById(R.id.title);
 
         }
-
-
         @Override
         public void onClick(View v) {
 
-
         }
     }
-    }
+}
 

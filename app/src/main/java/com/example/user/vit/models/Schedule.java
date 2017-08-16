@@ -4,17 +4,20 @@ import com.google.gson.annotations.SerializedName;
 
 public class Schedule<T>{
 
+    public Schedule() {
+    }
+
     @SerializedName("code")
-    private T code;
+    public T code;
 
     @SerializedName("type")
-    private T type;
+    public T type;
 
     @SerializedName("slot")
-    private T slot;
+    public String slot;
 
     @SerializedName("class")
-    private T class1;
+    public String class1;
 
     public T getCode() {
         return code;
@@ -32,19 +35,19 @@ public class Schedule<T>{
         this.type = type;
     }
 
-    public T getSlot() {
+    public String getSlot() {
         return slot;
     }
 
-    public void setSlot(T slot) {
+    public void setSlot(String slot) {
         this.slot = slot;
     }
 
-    public T getClass1() {
+    public String getClass1() {
         return class1;
     }
 
-    public void setClass1(T class1) {
+    public void setClass1(String class1) {
         this.class1 = class1;
     }
 }

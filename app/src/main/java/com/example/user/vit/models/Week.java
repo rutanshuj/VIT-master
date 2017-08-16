@@ -1,9 +1,6 @@
 package com.example.user.vit.models;
 
 
-import android.support.annotation.Nullable;
-
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Week<T> {
@@ -22,6 +19,12 @@ public class Week<T> {
 
     @SerializedName("FRI")
     private Day fri;
+
+    @SerializedName("SAT")
+    private Day sat;
+
+    @SerializedName("SUN")
+    private Day sun;
 
     public Day getMon() {
         return mon;
@@ -61,5 +64,21 @@ public class Week<T> {
 
     public void setFri(Day fri) {
         this.fri = fri;
+    }
+
+    public Day getSat() {
+        return sat;
+    }
+
+    public void setSat(Day sat) {
+        this.sat = sat;
+    }
+
+    public Day getSun() {
+        return sun;
+    }
+
+    public void setSun(Day sun) {
+        this.sun = sun;
     }
 }
