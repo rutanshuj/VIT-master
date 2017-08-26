@@ -3,23 +3,28 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:paddingTop="20dp">
+
+
             <LinearLayout
-                android:padding="10dp"
-                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
 
                 <TextView
                     android:id="@+id/today_time"
@@ -28,34 +33,65 @@
                     android:paddingBottom="10dp"/>
 
                 <TextView
-                    android:textSize="20sp"
                     android:id="@+id/today_location"
-                    android:layout_gravity="bottom"
-                    android:text="TT203"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:layout_gravity="bottom"
+                    android:text="TT203"
+                    android:textSize="20sp"
                     />
+
             </LinearLayout>
 
-            <ImageView
-                android:layout_weight="0.06"
-                android:layout_height="25dp"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                />
-            <TextView
-                android:paddingLeft="20dp"
-                android:id="@+id/today_subject"
-                android:textColor="@color/black"
-                android:layout_weight="0.7"
-                android:text="Analytical Bioinformatics"
-                android:maxLines="2"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:orientation="vertical">
 
-        </LinearLayout>
+
+                <TextView
+                    android:id="@+id/today_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Analytical Bioinformatics"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/today_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CSE3002"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/today_faculty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Prof. Balaakrishnan"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/today_course_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ETH"/>
+
+            </LinearLayout>
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

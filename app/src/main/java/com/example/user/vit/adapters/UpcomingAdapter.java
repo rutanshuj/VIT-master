@@ -38,29 +38,18 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View  itemview = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.upcoming_row, parent, false);
+                .inflate(R.layout.upcoming_frag, parent, false);
         return new MyViewHolder(itemview);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        for (int i = 0; i < courses.size(); i++) {
-            holder.title.setText(courses.get(i + 1).getCourse_title().toString());
-            holder.code.setText(courses.get(i+1).getCourse_code().toString());
-            holder.location.setText(schedules.get(i+1).getClass1().toString());
-            holder.slot.setText(courses.get(i+1).getCourse_slot().toString());
-            if(attendances.get(i+1).getCode().equals(courses.get(i+1).getCourse_code())){
-                holder.seekArc.setProgress(Integer.parseInt(attendances.get(i+1).getAp().toString()));
-            }
-        }
 
     }
-
     @Override
     public int getItemCount() {
         return 1;
     }
-
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView title, code, slot, location;

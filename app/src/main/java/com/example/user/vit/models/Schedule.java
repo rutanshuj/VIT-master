@@ -19,6 +19,16 @@ public class Schedule<T>{
     @SerializedName("class")
     public String class1;
 
+    public String course_title;
+
+    public String getCourse_title() {
+        return course_title;
+    }
+
+    public void setCourse_title(String course_title) {
+        this.course_title = course_title;
+    }
+
     public T getCode() {
         return code;
     }
@@ -46,7 +56,6 @@ public class Schedule<T>{
     public String getClass1() {
         return class1;
     }
-
     public void setClass1(String class1) {
         this.class1 = class1;
     }

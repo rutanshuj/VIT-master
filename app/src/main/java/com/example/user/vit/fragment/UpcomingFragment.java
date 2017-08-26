@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.user.vit.R;
-import com.example.user.vit.adapters.TodayAdapter;
 import com.example.user.vit.adapters.UpcomingAdapter;
 import com.example.user.vit.interfaces.VUApi;
 import com.example.user.vit.models.Attendance;
@@ -21,7 +20,7 @@ import com.example.user.vit.models.AttendanceResponse;
 import com.example.user.vit.models.Course;
 import com.example.user.vit.models.CourseResponse;
 import com.example.user.vit.models.Day;
-import com.example.user.vit.models.Response;
+import com.example.user.vit.models.TimeTableResponse;
 import com.example.user.vit.models.Schedule;
 import com.example.user.vit.models.TokenRequest;
 import com.google.gson.Gson;
@@ -58,7 +57,7 @@ public class UpcomingFragment extends android.support.v4.app.Fragment {
         TokenRequest tokenRequest = new TokenRequest();
         tokenRequest.setRegno("15BCE2016");
 
-        Call<Response> responseCall = service.getCourses(tokenRequest);
+        Call<TimeTableResponse> responseCall = service.getCourses(tokenRequest);
         Call<CourseResponse> responseCall1  = service.getCourseNames(tokenRequest);
         Call<AttendanceResponse> attendanceResponseCall = service.getAttendance(tokenRequest);
 
@@ -141,12 +140,12 @@ public class UpcomingFragment extends android.support.v4.app.Fragment {
             }
         });
 
-        responseCall.enqueue(new Callback<Response>() {
+        responseCall.enqueue(new Callback<TimeTableResponse>() {
             @Override
-            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+            public void onResponse(Call<TimeTableResponse> call, retrofit2.Response<TimeTableResponse> response) {
                 if(response.code() == 200 ){
 
-                    Response response1 = response.body();
+                    TimeTableResponse response1 = response.body();
                     Gson  gson = new Gson();
                     try {
                         switch(day){
@@ -185,7 +184,7 @@ public class UpcomingFragment extends android.support.v4.app.Fragment {
             }
 
             @Override
-            public void onFailure(Call<Response> call, Throwable t) {
+            public void onFailure(Call<TimeTableResponse> call, Throwable t) {
 
             }
         });

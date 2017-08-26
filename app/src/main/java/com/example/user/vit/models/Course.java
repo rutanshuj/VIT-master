@@ -16,6 +16,17 @@ public class Course<T> {
     @SerializedName("Slot")
     private T course_slot;
 
+    @SerializedName("Faculty Name")
+    private T course_fac;
+
+    public T getCourse_fac() {
+        return course_fac;
+    }
+
+    public void setCourse_fac(T course_fac) {
+        this.course_fac = course_fac;
+    }
+
     public T getCourse_code() {
         return course_code;
     }
