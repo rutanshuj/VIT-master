@@ -6,46 +6,57 @@ import com.google.gson.annotations.SerializedName;
 public class Attendance<T> {
 
     @SerializedName("CourseCode")
-    private T code;
+    private String code;
+
+    @SerializedName("CourseTitle")
+    private String title;
 
     @SerializedName("Attendance Percentage")
-    private T ap;
+    private String ap;
 
     @SerializedName("Attended Classes")
-    private T attc;
+    private String attc;
 
     @SerializedName("Total Classes")
-    private T ttc;
+    private String ttc;
 
-    public T getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(T code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
-    public T getAp() {
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAp() {
         return ap;
     }
 
-    public void setAp(T ap) {
+    public void setAp(String ap) {
         this.ap = ap;
     }
 
-    public T getAttc() {
+    public String getAttc() {
         return attc;
     }
 
-    public void setAttc(T attc) {
+    public void setAttc(String attc) {
         this.attc = attc;
     }
 
-    public T getTtc() {
+    public String getTtc() {
         return ttc;
     }
 
-    public void setTtc(T ttc) {
+    public void setTtc(String ttc) {
         this.ttc = ttc;
     }
 }

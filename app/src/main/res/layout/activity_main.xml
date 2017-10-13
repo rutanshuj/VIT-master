@@ -52,12 +52,12 @@
 
     </LinearLayout>
 
-    <ProgressBar
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/cgpa_btn"
+        android:text="CGPA"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:visibility="invisible"
-        android:id="@+id/progressBar"/>
+        android:layout_gravity="center"/>
 
     <Button
         android:layout_gravity="center"

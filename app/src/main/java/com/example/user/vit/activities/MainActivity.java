@@ -29,7 +29,7 @@ import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, b1, b2;
+    Button button, b1, b2, b3;
     String response;
     EditText editText1, editText2;
     String regno, password;
@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         editText1 = (EditText) findViewById(R.id.regno);
         editText2 = (EditText) findViewById(R.id.password);
         button = (Button) findViewById(R.id.login);
         b1 = (Button) findViewById(R.id.home);
         b2 = (Button) findViewById(R.id.mapbttn);
+        b3 = (Button) findViewById(R.id.cgpa_btn);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), MapActivity.class);
+                startActivity(i);
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), CGPACal.class);
                 startActivity(i);
             }
         });
@@ -86,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                     if (code == 200) {
                         Toast.makeText(getApplicationContext(),
                                 "Successful Login", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), Home1Activity.class);
+                        Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                         startActivity(intent);
                     } else if (code == 500) {
                         Toast.makeText(getApplicationContext(),

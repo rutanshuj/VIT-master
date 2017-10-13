@@ -104,10 +104,10 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.MyViewHolder
              if(dy.getNine_pm()!= null){
                 holder.time.setText("09:00 - 09:50");
         }
-        holder.course.setText(title.get(position));
+//        holder.course.setText(title.get(position));
         holder.code.setText(schedules.get(position).getCode().toString());
         holder.location.setText(sc.getClass1());
-        holder.faculty.setText(fac_list.get(position));
+//        holder.faculty.setText(fac_list.get(position));
         holder.type.setText(schedules.get(position).getType().toString());
     }
 

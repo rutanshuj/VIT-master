@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 
 import com.example.user.vit.R;
 import com.example.user.vit.fragment.TodayFragment;
-import com.example.user.vit.fragment.UpcomingFragment;
+import com.example.user.vit.fragment.UpFragment;
 
 import java.util.zip.Inflater;
 
@@ -46,9 +46,9 @@ public class Home1 extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch(position){
-                case 0: return new UpcomingFragment();
+                case 0: return new UpFragment();
                 case 1: return new TodayFragment();
-                default: return new UpcomingFragment();
+                default: return new UpFragment();
             }
         }
 

@@ -206,8 +206,6 @@ public class TodayFragment extends android.support.v4.app.Fragment {
                 schedule1.setType(jsonObject1.getString("type"));
                 schedule.add(schedule1);
 
-
-
             }
         }
 
